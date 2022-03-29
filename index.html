@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My little website</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span>My little website</span>
+        <img src="assets/myface.png" />
+      </header>
+    </div>
+    <div class="container">
+      <main>
+        <section role="cursus">
+          <img src="assets/first.png" />
+          <article>
+            <span>My curriculum</span>
+            <div class="links">
+              <div
+                class="links__item"
+                onclick="redirect('https://www.linkedin.com/in/corentin-io/')"
+              >
+                <a class="link" target="_blank">Education & Experience</a>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section role="passions">
+          <img src="assets/second.png" />
+          <article>
+            <span>My passions</span>
+            <div class="links">
+              <div
+                class="links__item"
+                onclick="redirect('https://dribbble.com/crtn-dev')"
+              >
+                <a class="link">Design</a>
+              </div>
+              <div
+                class="links__item"
+                onclick="redirect('https://www.cgtrader.com/crtn-io')"
+              >
+                <a class="link">3D</a>
+              </div>
+              <div
+                class="links__item"
+                onclick="redirect('https://crtn-dev-io.github.io/rana/')"
+              >
+                <a class="link">Comic</a>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section role="liens">
+          <img src="assets/third.png" />
+          <article>
+            <span>Useful links</span>
+            <div class="links">
+              <div
+                class="links__item"
+                onclick="redirect('https://github.com/crtn-dev-io')"
+              >
+                <a class="link">Github</a>
+              </div>
+              <div
+                class="links__item"
+                onclick="redirect('/assets/CORENTIN_HOUCHARD.pdf')"
+              >
+                <a class="link">Resume</a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      /**
+       * Redirect to a given url in a separate window
+       */
+      function redirect(url) {
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
