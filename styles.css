@@ -39,9 +39,9 @@
 
 :root .container {
   padding: 30px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 :root header {
@@ -65,8 +65,44 @@
   width: max-content;
 }
 
+@media (max-width: 880px) {
+  :root header {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 600px) {
+  :root header {
+    font-size: 7vw;
+  }
+}
+
+@media (max-width: 420px) {
+  :root header {
+    font-size: 8vw;
+  }
+}
+
 :root header img {
   height: 5vw;
+}
+
+@media (max-width: 880px) {
+  :root header img {
+    height: 7vw;
+  }
+}
+
+@media (max-width: 600px) {
+  :root header img {
+    height: 9vw;
+  }
+}
+
+@media (max-width: 420px) {
+  :root header img {
+    height: 11vw;
+  }
 }
 
 :root main {
@@ -74,6 +110,19 @@
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 880px) {
+  :root main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    place-items: center;
+  }
 }
 
 :root main section {
@@ -99,8 +148,39 @@
   text-align: end;
 }
 
+@media (max-width: 880px) {
+  :root main section:nth-child(1) {
+    place-items: center;
+  }
+  :root main section:nth-child(2) {
+    place-items: center;
+  }
+  :root main section:nth-child(3) {
+    place-items: center;
+    text-align: start;
+  }
+}
+
 :root main section img {
   height: 15vw;
+}
+
+@media (max-width: 880px) {
+  :root main section img {
+    height: 30vw;
+  }
+}
+
+@media (max-width: 600px) {
+  :root main section img {
+    height: 40vw;
+  }
+}
+
+@media (max-width: 420px) {
+  :root main section img {
+    height: 70vw;
+  }
 }
 
 :root article {
@@ -110,6 +190,31 @@
   grid-auto-rows: min-content;
   padding-top: 20px;
   font-size: 3vw;
+}
+
+@media (max-width: 1080px) {
+  :root article {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 880px) {
+  :root article {
+    font-size: 5vw;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  :root article {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 420px) {
+  :root article {
+    font-size: 9vw;
+  }
 }
 
 :root article span {
@@ -147,6 +252,30 @@
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
   transition: transform 200ms, -webkit-transform 200ms;
+}
+
+@media (max-width: 1080px) {
+  :root .links__item {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 880px) {
+  :root .links__item {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 600px) {
+  :root .links__item {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 420px) {
+  :root .links__item {
+    font-size: 6.5vw;
+  }
 }
 
 :root .links__item::after {

@@ -34,7 +34,7 @@
 
   .container {
     padding: 30px;
-    align-self: center;
+    align-items: center;
   }
 
   @mixin color($color) {
@@ -50,6 +50,15 @@
   }
 
   header {
+    @media (max-width: 880px) {
+      font-size: 6vw;
+    }
+    @media (max-width: 600px) {
+      font-size: 7vw;
+    }
+    @media (max-width: 420px) {
+      font-size: 8vw;
+    }
     display: grid;
     grid-template-columns: repeat(2, max-content);
     column-gap: 30px;
@@ -62,12 +71,27 @@
     width: max-content;
     img {
       height: 5vw;
+      @media (max-width: 880px) {
+        height: 7vw;
+      }
+      @media (max-width: 600px) {
+        height: 9vw;
+      }
+      @media (max-width: 420px) {
+        height: 11vw;
+      }
     }
   }
 
   main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 880px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      align-items: center;
+      @include place-items(center);
+    }
     section {
       @include font("SFPRO-Bold");
       @include color(var(--me-dark-color));
@@ -83,8 +107,29 @@
         @include place-items(end);
         text-align: end;
       }
+      @media (max-width: 880px) {
+        &:nth-child(1) {
+          @include place-items(center);
+        }
+        &:nth-child(2) {
+          @include place-items(center);
+        }
+        &:nth-child(3) {
+          @include place-items(center);
+          text-align: start;
+        }
+      }
       img {
         height: 15vw;
+        @media (max-width: 880px) {
+          height: 30vw;
+        }
+        @media (max-width: 600px) {
+          height: 40vw;
+        }
+        @media (max-width: 420px) {
+          height: 70vw;
+        }
       }
     }
   }
@@ -94,6 +139,19 @@
     grid-auto-rows: min-content;
     padding-top: 20px;
     font-size: 3vw;
+    @media (max-width: 1080px) {
+      font-size: 3.5vw;
+    }
+    @media (max-width: 880px) {
+      font-size: 5vw;
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      font-size: 6vw;
+    }
+    @media (max-width: 420px) {
+      font-size: 9vw;
+    }
     span {
       padding-bottom: 20px;
     }
@@ -114,6 +172,18 @@
     row-gap: 20px;
     &__item {
       font-size: 1.3vw;
+      @media (max-width: 1080px) {
+        font-size: 2vw;
+      }
+      @media (max-width: 880px) {
+        font-size: 3vw;
+      }
+      @media (max-width: 600px) {
+        font-size: 4vw;
+      }
+      @media (max-width: 420px) {
+        font-size: 6.5vw;
+      }
       @include font("SFPRO-Regular");
       cursor: pointer;
       border-bottom: 1px solid var(--me-grey-color);
